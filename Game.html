@@ -1,0 +1,32 @@
+<!--Simple game using JavaScript-->
+<!DOCTYPE html><html lang="en">
+	<head>
+		<title>Generating Table </title>
+		<link rel="stylesheet" href="Styles.css">
+		<script language="JavaScript" type="text/javascript" src="Functions.js" charset="utf-8"></script>
+  </head>
+	<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">	
+
+		</br>
+		<form name="FormGame" id="FormGame" class="FormDesign">
+			<table>
+				<tr>
+					<th class="ColumnTitles"><label for="colNumber">Columns</label></th> 
+					<th class="ColumnTitles"><label for="rowNumber">Rows</label></th> 
+					<th class="ColumnTitles"><label for="scoNumber">Score</label></th>
+					<th id = "ColorField" class="ColFieldDesign" rowspan="3"></th> 
+				</tr> 
+	
+				<tr>
+					<td><input type="text" class="FieldDesign" id="colNumber" onKeyPress="return checkIt(event)" onKeyUp="return maxChar(event,this.value,2)" onKeyDown="return maxChar(event,this.value,2)"></td>
+					<td><input type="text" class="FieldDesign" id="rowNumber" onKeyPress="return checkIt(event)" onKeyUp="return maxChar(event,this.value,2)" onKeyDown="return maxChar(event,this.value,2)"></td>
+					<td><input type="text" class="FieldDesign" id="scoNumber" value="0" disabled></td>
+				</tr>
+				<tr>
+					<td colspan="3"><input type="button" class="GenerateButton" value="Generate" onclick="return notEmptyTextField()"></td>
+				</tr>
+			</table>
+		</form>
+		<p id="Paragraph"></p>
+	</body>
+</html>
